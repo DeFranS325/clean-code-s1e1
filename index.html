@@ -5,30 +5,32 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet"
           href="style.css"
-          media="screen"
-          charset="utf-8">
+          media="screen">
   </head>
   <body class="body">
     <header class="header">
-      <img src="./eisenhower-matrix.jpg" alt="eisenhower-matrix"><a class="more-inf" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+      <img src="./eisenhower-matrix.jpg" alt="eisenhower-matrix">
+      <a class="more-inf" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
     </header>
-    <main class="main-page">
-      <div id="add-list"><label for="new-task" class="new-task-title">Add Item</label>
+    <main class="main">
+      <div class="add-todo">
+        <label for="new-task" class="add-todo__title">Add Item</label>      
         <div class="task-row-wrapper">
-          <input id="new-task" class="task textbox" type="text"><button class="button">Add</button>
+          <input id="new-task" class="task add-todo__input-text" type="text">
+          <button class="button">Add</button>
         </div>
       </div>
       <section class="section">
         <h3 class="h3">Todo</h3>
-        <ul id="incomplete-tasks" class="todoList">
-          <li class="todoList__item">
+        <ul class="incomplete-tasks todo-list">
+          <li class="todo-list__item">
             <input type="checkbox" class="checkbox">
             <label class="task label">Pay Bills</label>
             <input type="text" class="task textbox">
             <button class="button edit">Edit</button>
             <button class="button delete"><img class="img" src="./remove.svg" alt="Remove"></button>
           </li>
-          <li class="todoList__item todoList__item_edit">
+          <li class="todo-list__item todo-list__item_edit">
             <input type="checkbox" class="checkbox">
             <label class="task label">Go Shopping</label>
             <input type="text" value="Go Shopping" class="task textbox">
@@ -39,8 +41,8 @@
       </section>
       <section class="section">
         <h3 class="h3">Completed</h3>
-        <ul id="completed-tasks" class="todoList">
-          <li class="todoList__item">
+        <ul class="completed-tasks todo-list">
+          <li class="todo-list__item">
             <input type="checkbox" class="checkbox" checked>
             <label class="task label">See the Doctor</label>
             <input type="text" class="task textbox">

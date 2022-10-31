@@ -10,8 +10,8 @@
 
 var taskInput = document.getElementById("new-task");//Add a new task.
 var addButton = document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder = document.getElementById("incomplete-tasks");//ul of #incompleteTasks
-var completedTasksHolder = document.getElementById("completed-tasks");//completed-tasks
+var incompleteTaskHolder = document.querySelector(".incomplete-tasks");//ul of #incompleteTasks
+var completedTasksHolder = document.querySelector(".completed-tasks");//completed-tasks
 
 
 //New task list item
@@ -32,7 +32,7 @@ var createNewTaskElement = function(taskString){
     var deleteButton = document.createElement("button");//delete button
     var deleteButtonImg = document.createElement("img");//delete button image
 
-    listItem.className = "todoList__item";
+    listItem.className = "todo-list__item";
 
     label.innerText = taskString;
     label.className = "task label";
@@ -90,7 +90,7 @@ var editTask = function(){
     var editInput = listItem.querySelector(".textbox");
     var label = listItem.querySelector("label");
     var editBtn = listItem.querySelector(".button.edit");
-    var containsClass = listItem.classList.contains("todoList__item_edit");
+    var containsClass = listItem.classList.contains("todo-list__item_edit");
     //If class of the parent is .editmode
     if(containsClass){
 
@@ -104,7 +104,7 @@ var editTask = function(){
     }
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("todoList__item_edit");
+    listItem.classList.toggle("todo-list__item_edit");
 };
 
 
