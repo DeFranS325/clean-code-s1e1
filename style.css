@@ -108,7 +108,7 @@ input,
   display: block;
   margin: 0 0 20px;
 }
-#new-task {
+.add-todo__input-text {
   width: 318px;
 }
 
